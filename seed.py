@@ -1,4 +1,5 @@
-from main import app, db, Provider, Review
+from main import app
+from models import db, Provider, Review
 
 def seed_data():
     with app.app_context():
