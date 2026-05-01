@@ -1,0 +1,220 @@
+{% extends "base.html" %}
+
+{% block title %}API Documentation - Service Provider Directory{% endblock %}
+
+{% block content %}
+<div class="max-w-5xl mx-auto">
+    <div class="prose max-w-none mb-8">
+        <h1 class="text-4xl font-bold flex items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 text-primary">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75L16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z" />
+            </svg>
+            Service Provider Directory API
+            <div class="badge badge-primary text-sm font-normal align-middle ml-2">1.0.0</div>
+        </h1>
+        <p class="text-lg opacity-80 mt-4">This is the OpenAPI-style documentation for the Public Service Provider Directory API. Below you will find all available endpoints, parameters, and response structures.</p>
+    </div>
+
+    <!-- Providers Section -->
+    <h2 class="text-2xl font-bold mt-10 mb-4 border-b border-base-300 pb-2">Providers</h2>
+    <div class="space-y-4">
+        
+        <!-- GET /providers -->
+        <div class="collapse collapse-arrow bg-base-100 shadow-md border-l-4 border-info">
+            <input type="checkbox" /> 
+            <div class="collapse-title font-medium flex items-center gap-4 bg-base-200">
+                <span class="badge badge-info badge-lg text-info-content font-bold w-20">GET</span>
+                <span class="text-lg font-mono">/providers</span>
+                <span class="opacity-70 ml-auto hidden sm:block">Returns all service providers</span>
+            </div>
+            <div class="collapse-content bg-base-100 pt-4">
+                <p class="mb-4">Retrieves a comprehensive list of all professionals available in the directory.</p>
+                <h4 class="font-bold text-sm uppercase opacity-70 mb-2">Responses</h4>
+                <div class="bg-base-300 rounded-box p-4 font-mono text-sm overflow-x-auto">
+<pre><code>[
+  {
+    "id": 1,
+    "name": "Alvison Hunter",
+    "trade": "Senior Web Developer",
+    "phone": "+505 8863 8751",
+    "email": "alvison@gmail.com",
+    "photo_url": "...",
+    "location": "Nicaragua",
+    "experience_years": 6,
+    "is_verified": true,
+    "starting_rate": 70.0,
+    "bio": "..."
+  }
+]</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- POST /providers -->
+        <div class="collapse collapse-arrow bg-base-100 shadow-md border-l-4 border-success">
+            <input type="checkbox" /> 
+            <div class="collapse-title font-medium flex items-center gap-4 bg-base-200">
+                <span class="badge badge-success badge-lg text-success-content font-bold w-20">POST</span>
+                <span class="text-lg font-mono">/providers</span>
+                <span class="opacity-70 ml-auto hidden sm:block">Add a new provider</span>
+            </div>
+            <div class="collapse-content bg-base-100 pt-4">
+                <p class="mb-4">Creates a new service provider profile in the directory.</p>
+                
+                <h4 class="font-bold text-sm uppercase opacity-70 mb-2">Request Body</h4>
+                <div class="bg-base-300 rounded-box p-4 font-mono text-sm overflow-x-auto mb-4">
+<pre><code>{
+  "name": "string (required)",
+  "trade": "string (required)",
+  "phone": "string",
+  "email": "string",
+  "photo_url": "string (url)",
+  "location": "string",
+  "experience_years": "integer",
+  "is_verified": "boolean",
+  "starting_rate": "float",
+  "bio": "string"
+}</code></pre>
+                </div>
+
+                <h4 class="font-bold text-sm uppercase opacity-70 mb-2">Responses</h4>
+                <div class="flex gap-2 mb-2">
+                    <span class="badge badge-success text-success-content">201 Created</span>
+                    <span class="badge badge-error text-error-content">400 Bad Request</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- GET /providers/{pro_id} -->
+        <div class="collapse collapse-arrow bg-base-100 shadow-md border-l-4 border-info">
+            <input type="checkbox" /> 
+            <div class="collapse-title font-medium flex items-center gap-4 bg-base-200">
+                <span class="badge badge-info badge-lg text-info-content font-bold w-20">GET</span>
+                <span class="text-lg font-mono">/providers/{pro_id}</span>
+                <span class="opacity-70 ml-auto hidden sm:block">Find provider by ID</span>
+            </div>
+            <div class="collapse-content bg-base-100 pt-4">
+                <p class="mb-4">Returns a single provider's detailed information.</p>
+                <h4 class="font-bold text-sm uppercase opacity-70 mb-2">Parameters</h4>
+                <div class="overflow-x-auto mb-4">
+                    <table class="table table-sm">
+                        <thead><tr><th>Name</th><th>Description</th></tr></thead>
+                        <tbody>
+                            <tr><td><code>pro_id</code> <span class="text-error">*</span></td><td>Integer ID of the provider</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h4 class="font-bold text-sm uppercase opacity-70 mb-2">Responses</h4>
+                <div class="flex gap-2">
+                    <span class="badge badge-success text-success-content">200 OK</span>
+                    <span class="badge badge-error text-error-content">404 Not Found</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- PUT /providers/{pro_id} -->
+        <div class="collapse collapse-arrow bg-base-100 shadow-md border-l-4 border-warning">
+            <input type="checkbox" /> 
+            <div class="collapse-title font-medium flex items-center gap-4 bg-base-200">
+                <span class="badge badge-warning badge-lg text-warning-content font-bold w-20">PUT</span>
+                <span class="text-lg font-mono">/providers/{pro_id}</span>
+                <span class="opacity-70 ml-auto hidden sm:block">Update an existing provider</span>
+            </div>
+            <div class="collapse-content bg-base-100 pt-4">
+                <p class="mb-4">Updates the details of an existing provider.</p>
+                <h4 class="font-bold text-sm uppercase opacity-70 mb-2">Parameters</h4>
+                <div class="overflow-x-auto mb-4">
+                    <table class="table table-sm">
+                        <thead><tr><th>Name</th><th>Description</th></tr></thead>
+                        <tbody>
+                            <tr><td><code>pro_id</code> <span class="text-error">*</span></td><td>Integer ID of the provider</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h4 class="font-bold text-sm uppercase opacity-70 mb-2">Request Body (Partial updates allowed)</h4>
+                <div class="bg-base-300 rounded-box p-4 font-mono text-sm overflow-x-auto mb-4">
+<pre><code>{
+  "name": "string",
+  "trade": "string",
+  "phone": "string",
+  "bio": "string"
+}</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- DELETE /providers/{pro_id} -->
+        <div class="collapse collapse-arrow bg-base-100 shadow-md border-l-4 border-error">
+            <input type="checkbox" /> 
+            <div class="collapse-title font-medium flex items-center gap-4 bg-base-200">
+                <span class="badge badge-error badge-lg text-error-content font-bold w-20">DELETE</span>
+                <span class="text-lg font-mono">/providers/{pro_id}</span>
+                <span class="opacity-70 ml-auto hidden sm:block">Delete a provider</span>
+            </div>
+            <div class="collapse-content bg-base-100 pt-4">
+                <p class="mb-4">Deletes a provider and gracefully cascades the deletion to all their associated reviews.</p>
+                <h4 class="font-bold text-sm uppercase opacity-70 mb-2">Parameters</h4>
+                <div class="overflow-x-auto mb-4">
+                    <table class="table table-sm">
+                        <thead><tr><th>Name</th><th>Description</th></tr></thead>
+                        <tbody>
+                            <tr><td><code>pro_id</code> <span class="text-error">*</span></td><td>Integer ID of the provider</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reviews Section -->
+    <h2 class="text-2xl font-bold mt-10 mb-4 border-b border-base-300 pb-2">Reviews</h2>
+    <div class="space-y-4">
+        
+        <!-- GET /providers/{pro_id}/reviews -->
+        <div class="collapse collapse-arrow bg-base-100 shadow-md border-l-4 border-info">
+            <input type="checkbox" /> 
+            <div class="collapse-title font-medium flex items-center gap-4 bg-base-200">
+                <span class="badge badge-info badge-lg text-info-content font-bold w-20">GET</span>
+                <span class="text-lg font-mono">/providers/{pro_id}/reviews</span>
+                <span class="opacity-70 ml-auto hidden sm:block">Get reviews for provider</span>
+            </div>
+            <div class="collapse-content bg-base-100 pt-4">
+                <p class="mb-4">Retrieves all reviews associated with a specific provider.</p>
+                <h4 class="font-bold text-sm uppercase opacity-70 mb-2">Responses</h4>
+                <div class="bg-base-300 rounded-box p-4 font-mono text-sm overflow-x-auto">
+<pre><code>[
+  {
+    "id": 1,
+    "pro_id": 1,
+    "rating": 5,
+    "comment": "Great work!"
+  }
+]</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- POST /providers/{pro_id}/reviews -->
+        <div class="collapse collapse-arrow bg-base-100 shadow-md border-l-4 border-success">
+            <input type="checkbox" /> 
+            <div class="collapse-title font-medium flex items-center gap-4 bg-base-200">
+                <span class="badge badge-success badge-lg text-success-content font-bold w-20">POST</span>
+                <span class="text-lg font-mono">/providers/{pro_id}/reviews</span>
+                <span class="opacity-70 ml-auto hidden sm:block">Submit a review</span>
+            </div>
+            <div class="collapse-content bg-base-100 pt-4">
+                <p class="mb-4">Submit a new review for a provider.</p>
+                
+                <h4 class="font-bold text-sm uppercase opacity-70 mb-2">Request Body</h4>
+                <div class="bg-base-300 rounded-box p-4 font-mono text-sm overflow-x-auto mb-4">
+<pre><code>{
+  "rating": "integer (1-5, required)",
+  "comment": "string"
+}</code></pre>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
