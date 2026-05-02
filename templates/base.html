@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="business">
 
 <head>
     <meta charset="UTF-8">
@@ -15,31 +15,13 @@
 </head>
 
 <body class="min-h-screen bg-base-200">
-    <div class="navbar bg-primary text-primary-content shadow-lg mb-8 sticky top-0 z-50">
-        <div class="container mx-auto">
-            <div class="flex-1">
-                <a href="/" class="btn btn-ghost text-white text-xl">Service Provider Directory</a>
-            </div>
-            <div class="flex-none gap-2">
-                <ul class="menu menu-horizontal px-1">
-                    <li><a href="/api-docs" class="btn btn-info text-white btn-sm">API Docs</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    {% include "main_navbar.html" %}
 
     <div class="container mx-auto px-4 mb-16">
         {% block content %}{% endblock %}
     </div>
 
-    <footer
-        class="footer footer-center sticky bottom-0 w-full p-4 bg-base-100 text-base-content bg-neutral text-neutral-content">
-        <div class="container mx-auto">
-            <p><script>document.write(new Date().getFullYear())</script> Service Provider Directory. All rights reserved.</p>
-            <p class="text-xs text-gray-300">Made with ❤️ by Alvison Hunter. For educational and proof of concept
-                purposes only.</p>
-        </div>
-    </footer>
+    {% include "footer.html" %}
 </body>
 
 </html>
