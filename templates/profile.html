@@ -19,7 +19,8 @@
         <div class="card bg-base-100 shadow-xl">
             <figure class="px-6 pt-6">
                 {% if pro.photo_url %}
-                <img src="{{ pro.photo_url }}" alt="{{ pro.name }}" class="rounded-xl object-cover h-96 w-full" />
+                <img src="{{ pro.photo_url }}" alt="{{ pro.name }}"
+                    class="rounded-xl object-cover object-top h-96 w-full" />
                 {% else %}
                 <div class="bg-neutral text-neutral-content rounded-xl h-64 w-full flex items-center justify-center">
                     <span class="text-6xl opacity-50">{{ pro.name[0] }}</span>

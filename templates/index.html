@@ -5,15 +5,22 @@
 {% block content %}
 <div class="text-center mb-10">
     <h1 class="text-4xl font-bold mb-4">Find a Local Professional</h1>
-    <p class="text-lg opacity-80">Browse our directory of trusted service providers for your needs.</p>
+    <p class="text-lg opacity-80 mb-6">Browse our directory of trusted service providers for your needs.</p>
+    
+    <div class="max-w-md mx-auto relative">
+        <input type="text" id="searchInput" placeholder="Search by name or trade..." class="input input-bordered w-full pr-10 shadow-sm" onkeyup="filterProviders()" />
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 absolute right-3 top-3.5 opacity-50">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+        </svg>
+    </div>
 </div>
 
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="providerGrid">
     {% for pro in providers %}
-    <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+    <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow duration-300 provider-card" data-name="{{ pro.name }}" data-trade="{{ pro.trade }}">
         <figure class="px-6 pt-6">
             {% if pro.photo_url %}
-            <img src="{{ pro.photo_url }}" alt="{{ pro.name }}" class="rounded-xl object-cover h-80 w-full" />
+            <img src="{{ pro.photo_url }}" alt="{{ pro.name }}" class="rounded-xl object-cover h-96 w-full" />
             {% else %}
             <div class="bg-neutral text-neutral-content rounded-xl h-48 w-full flex items-center justify-center">
                 <span class="text-4xl opacity-50">{{ pro.name[0] }}</span>
@@ -55,6 +62,27 @@
     <div class="col-span-1 md:col-span-2 lg:col-span-3 text-center py-10">
         <h3 class="text-2xl font-bold opacity-50">No providers found in the directory yet.</h3>
     </div>
+    </div>
     {% endfor %}
 </div>
+
+<script>
+function filterProviders() {
+    const input = document.getElementById('searchInput');
+    const filter = input.value.toLowerCase();
+    const grid = document.getElementById('providerGrid');
+    const cards = grid.getElementsByClassName('provider-card');
+
+    for (let i = 0; i < cards.length; i++) {
+        const name = cards[i].getAttribute('data-name').toLowerCase();
+        const trade = cards[i].getAttribute('data-trade').toLowerCase();
+        
+        if (name.includes(filter) || trade.includes(filter)) {
+            cards[i].style.display = "";
+        } else {
+            cards[i].style.display = "none";
+        }
+    }
+}
+</script>
 {% endblock %}
