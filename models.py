@@ -10,7 +10,7 @@ db = SQLAlchemy()
 class Provider(db.Model):
     """
     SQLAlchemy model representing a Service Provider.
-    
+
     Attributes:
         id (int): Primary key.
         name (str): Full name of the service provider.
@@ -26,26 +26,28 @@ class Provider(db.Model):
         reviews (list): A list of Review objects associated with this provider.
     """
     __tablename__ = 'providers'
-    
+
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), nullable=False)
     trade = db.Column(db.String(100), nullable=False)
     phone = db.Column(db.String(50))
     email = db.Column(db.String(120))
+    linkedIn_url = db.Column(db.String(255))
+    github_url = db.Column(db.String(255))
     photo_url = db.Column(db.String(255))
     location = db.Column(db.String(100))
     experience_years = db.Column(db.Integer)
     is_verified = db.Column(db.Boolean, default=False)
     starting_rate = db.Column(db.Float)
     bio = db.Column(db.Text)
-    
+
     # Relationship to reviews. If a provider is deleted, their reviews are also deleted.
     reviews = db.relationship('Review', backref='provider', lazy=True, cascade="all, delete-orphan")
 
     def to_dict(self):
         """
         Converts the Provider object into a JSON-serializable dictionary.
-        
+
         Returns:
             dict: The dictionary representation of the provider.
         """
@@ -55,6 +57,8 @@ class Provider(db.Model):
             "trade": self.trade,
             "phone": self.phone,
             "email": self.email,
+            "linkedIn_url": self.linkedIn_url,
+            "github_url": self.github_url,
             "photo_url": self.photo_url,
             "location": self.location,
             "experience_years": self.experience_years,
@@ -66,7 +70,7 @@ class Provider(db.Model):
 class Review(db.Model):
     """
     SQLAlchemy model representing a Review submitted for a Provider.
-    
+
     Attributes:
         id (int): Primary key.
         pro_id (int): Foreign key linking to the associated Provider.
@@ -75,7 +79,7 @@ class Review(db.Model):
         ip_address (str): The IP address of the reviewer to prevent duplicates.
     """
     __tablename__ = 'reviews'
-    
+
     id = db.Column(db.Integer, primary_key=True)
     pro_id = db.Column(db.Integer, db.ForeignKey('providers.id'), nullable=False)
     rating = db.Column(db.Integer, nullable=False)
@@ -85,7 +89,7 @@ class Review(db.Model):
     def to_dict(self):
         """
         Converts the Review object into a JSON-serializable dictionary.
-        
+
         Returns:
             dict: The dictionary representation of the review.
         """

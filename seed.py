@@ -11,123 +11,125 @@ def seed_data():
         providers_data = [
     {
         "name": "Alvison Hunter",
-        "trade": "Senior Web Developer",
+        "trade": "Senior Product Engineer",
         "phone": "+505 8863 8751",
         "email": "alvison@gmail.com",
-        "photo_url": "https://res.cloudinary.com/alvison-hunter/image/upload/v1777653422/starwars/ccl%20team/alvison_p3gvwd.png",  # generic dev portrait
+        "photo_url": "https://res.cloudinary.com/alvison-hunter/image/upload/v1777653422/starwars/ccl%20team/alvison_p3gvwd.png",
         "location": "Carazo, Nicaragua",
         "experience_years": 16,
         "is_verified": True,
         "starting_rate": 25.0,
-        "bio": "Senior Frontend Engineer specializing in React, Next.js, TypeScript, and Python. Experienced in headless CMS, API integrations, and building scalable web applications for global brands."
+        "bio": "Senior Product Engineer specializing in Next.js, AI-powered SaaS platforms, and scalable workflow systems. Experienced with React, TypeScript, Node.js, PostgreSQL, Python, and Go."
     },
     {
         "name": "Alexander Ruiz",
-        "trade": "Software Engineer",
-        "phone": "",  # not public; could leave empty or omit
-        "email": "",  # not public; could leave empty or omit
-        "photo_url": "https://res.cloudinary.com/alvison-hunter/image/upload/v1777653419/starwars/ccl%20team/alex_jfz85j.png",  # generic engineer
+        "trade": "Full-Stack Developer",
+        "phone": "",
+        "email": "ralexs.acu@gmail.com",
+        "photo_url": "https://res.cloudinary.com/alvison-hunter/image/upload/v1777653419/starwars/ccl%20team/alex_jfz85j.png",
         "location": "Carazo, Nicaragua",
         "experience_years": 9,
         "is_verified": True,
-        "starting_rate": 22.0,
-        "bio": "Software engineer with experience in industrial electronics, maintenance, and electrical installations. Works with complex systems and third‑party service coordination."
+        "starting_rate": 18.0,
+        "bio": "Full-Stack Developer focused on JavaScript, TypeScript, React, and Node.js applications. Experienced in database design, custom software, and modern web development."
     },
     {
         "name": "Ernesto Gutierrez",
-        "trade": "CTU Manager",
-        "phone": "",
-        "email": "",
-        "photo_url": "https://res.cloudinary.com/alvison-hunter/image/upload/v1777653423/starwars/ccl%20team/tito_ksrqmh.png",  # generic manager
+        "trade": "Full-Stack Developer",
+        "phone": "50581886845",
+        "email": "eblind39@hotmail.com",
+        "linkedIn_url":"https://www.linkedin.com/in/ernesto-gutierrez-ergchrvs/",
+        "github_url": "https://github.com/",
+        "photo_url": "https://res.cloudinary.com/alvison-hunter/image/upload/v1777653423/starwars/ccl%20team/tito_ksrqmh.png",
         "location": "Granada, Nicaragua",
         "experience_years": 12,
         "is_verified": True,
-        "starting_rate":30.0,
-        "bio": "CTU Manager focused on organizational transformation and infrastructure projects. Experienced in leading teams and partnerships that build large‑scale infrastructure with long‑term social impact."
+        "starting_rate": 20.0,
+        "bio": "Full-Stack Developer experienced with React, TypeScript, C#/.NET, Java, and JavaScript ecosystems. Builds scalable web applications and enterprise software solutions."
     },
     {
-        "name": "Patrick Cairolli",
-        "trade": "Software Engineer",
+        "name": "Patrick Cairoli",
+        "trade": "Full-Stack JavaScript Developer",
         "phone": "",
-        "email": "",
-        "photo_url": "https://res.cloudinary.com/alvison-hunter/image/upload/v1777653421/starwars/ccl%20team/pat_sjcz9z.png",  # generic lawyer
+        "email": "patrick.cairoli@gmail.com",
+        "photo_url": "https://res.cloudinary.com/alvison-hunter/image/upload/v1777653421/starwars/ccl%20team/pat_sjcz9z.png",
         "location": "Managua, Nicaragua",
         "experience_years": 6,
         "is_verified": True,
         "starting_rate": 15.0,
-        "bio": "Software Engineer working across Nicaragua and U.S. cases. Experienced in case coordination, documentation, and supporting clients through complex legal processes."
+        "bio": "Full-Stack JavaScript Developer working with React, Express, and PostgreSQL applications. Passionate about building efficient web platforms and learning new technologies."
     },
     {
-        "name": "Jean Cairolli",
-        "trade": "Frontend Developer",
+        "name": "Jean Cairoli",
+        "trade": "Full-Stack Web Developer",
         "phone": "",
-        "email": "",
-        "photo_url": "https://res.cloudinary.com/alvison-hunter/image/upload/v1777653421/starwars/ccl%20team/papu_p7srlu.png",  # generic Frontend Developer
+        "email": "jcairoli1993@gmail.com",
+        "photo_url": "https://res.cloudinary.com/alvison-hunter/image/upload/v1777653421/starwars/ccl%20team/papu_p7srlu.png",
         "location": "Managua,Nicaragua",
         "experience_years": 7,
         "is_verified": True,
         "starting_rate": 15.0,
-        "bio": "Fro helping institutions and students navigate academic pathways, curriculum development, and learning strategies through personalized consulting."
+        "bio": "Full-Stack Web Developer experienced with React, Next.js, Vue, Node.js, Gatsby, and micro-frontends. Focused on creating innovative, scalable, and user-centered digital solutions."
     },
     {
         "name": "Jorge Cruz",
-        "trade": "Software Engineer",
+        "trade": "Backend Web Developer",
         "phone": "",
-        "email": "",
-        "photo_url": "https://res.cloudinary.com/alvison-hunter/image/upload/v1777653421/starwars/ccl%20team/jorge_zs2rn9.png",  # generic dev
+        "email": "jorcrus2@gmail.com",
+        "photo_url": "https://res.cloudinary.com/alvison-hunter/image/upload/v1777653421/starwars/ccl%20team/jorge_zs2rn9.png",
         "location": "Managua, Nicaragua",
         "experience_years": 7,
         "is_verified": True,
-        "starting_rate": 15.0,
-        "bio": "Software Engineer specializing in backend development with Java and related technologies. Passionate about building reliable and maintainable applications."
+        "starting_rate": 10.0,
+        "bio": "Backend Web Developer specializing in Laravel, Symfony, PHP, and JavaScript applications. Experienced in HubSpot HubL modules, themes customization, and scalable web systems."
     },
     {
-        "name": "Krystopher Rivera",
-        "trade": "Software Developer",
+        "name": "Krysthopher Rivera",
+        "trade": "Full-Stack Developer",
         "phone": "",
-        "email": "",
-        "photo_url": "https://res.cloudinary.com/alvison-hunter/image/upload/v1777653420/starwars/ccl%20team/Krys_Ruiz_01_ykfjls.png",  # generic dev
+        "email": "krysthopher@gmail.com",
+        "photo_url": "https://res.cloudinary.com/alvison-hunter/image/upload/v1777653420/starwars/ccl%20team/Krys_Ruiz_01_ykfjls.png",
         "location": "Carazo, Nicaragua",
         "experience_years": 4,
         "is_verified": True,
         "starting_rate": 12.0,
-        "bio": "Software developer experienced with Angular, .NET, React, and Spring Boot. Builds scalable, user‑focused web and backend systems for diverse industries."
+        "bio": "Full-Stack Developer experienced in React, Next.js, Node.js, GraphQL, MongoDB, and TypeScript. Passionate about web development, mentorship, and delivering high-quality solutions."
     },
     {
         "name": "Carlos Mondragon",
-        "trade": "Full‑Stack Developer",
+        "trade": "Full-Stack Developer",
         "phone": "",
-        "email": "",
-        "photo_url": "https://res.cloudinary.com/alvison-hunter/image/upload/v1777653420/starwars/ccl%20team/carlos_ctpsut.png",  # generic coder
+        "email": "cema962002@gmail.com",
+        "photo_url": "https://res.cloudinary.com/alvison-hunter/image/upload/v1777653420/starwars/ccl%20team/carlos_ctpsut.png",
         "location": "Managua, Nicaragua",
         "experience_years": 3,
         "is_verified": True,
         "starting_rate": 13.0,
-        "bio": "Full‑stack developer with strong experience in PHP, Laravel, MySQL, React, TypeScript, and Node.js. Builds end‑to‑end applications and modern web platforms."
+        "bio": "Full-Stack Developer specializing in React, Next.js, TypeScript, NestJS, and FastAPI applications. Builds modern, accessible, and scalable web platforms with clean UI architecture."
     },
     {
         "name": "Bosco Granizo",
-        "trade": "Engineering & Sourcing Leader",
+        "trade": "Senior PHP & Ecommerce Developer",
         "phone": "",
-        "email": "",
-        "photo_url": "https://res.cloudinary.com/alvison-hunter/image/upload/v1777653420/starwars/ccl%20team/Juan_bosco_ddxyai.png",  # generic engineer leader
+        "email": "mayorgagranizo@gmail.com",
+        "photo_url": "https://res.cloudinary.com/alvison-hunter/image/upload/v1777653420/starwars/ccl%20team/Juan_bosco_ddxyai.png",
         "location": "Asuncion, Paraguay",
         "experience_years": 22,
         "is_verified": True,
-        "starting_rate": 120.0,
-        "bio": "Executive engineering and strategic sourcing leader with over 20+ years in the household appliances industry. Focuses on P&L leadership and cost‑impact initiatives."
+        "starting_rate": 40.0,
+        "bio": "Senior PHP & Ecommerce Developer experienced with Laravel, Symfony, WordPress, Shopify, and Prestashop. Specialized in ecommerce platforms, web scraping, and custom web solutions."
     },
     {
         "name": "Jared Vilchez",
-        "trade": "Software Engineer",
+        "trade": "Frontend Web Developer",
         "phone": "",
-        "email": "",
-        "photo_url": "https://res.cloudinary.com/alvison-hunter/image/upload/v1777653418/starwars/ccl%20team/jared_m9b6ma.png",  # generic coder
+        "email": "jared.zvo@gmail.com",
+        "photo_url": "https://res.cloudinary.com/alvison-hunter/image/upload/v1777653418/starwars/ccl%20team/jared_m9b6ma.png",
         "location": "Carazo, Nicaragua",
         "experience_years": 2,
         "is_verified": True,
         "starting_rate": 10.0,
-        "bio": "Software engineer and mobile‑focused developer building web and mobile platforms that connect users with local service providers and home‑solutions marketplaces."
+        "bio": "Frontend Web Developer skilled in React.js, TypeScript, GraphQL, and Material UI. Builds responsive interfaces with modern frontend technologies and clean user experiences."
     }
 ]
 

@@ -8,11 +8,13 @@ CURRENT UI DEMO
 ## Features
 
 - **Modern UI/UX**: Built with standard HTML, Tailwind CSS, and DaisyUI for a beautiful, responsive, and mobile-friendly experience.
-- **Provider Profiles**: Detailed profiles showing trade, contact info, bio, hourly rates, and verification status.
+- **Modular Architecture**: Frontend Javascript logic and Jinja UI components are cleanly decoupled for maintainability.
+- **Provider Profiles**: Detailed profiles showing trade, contact info, bio, hourly rates, social links (LinkedIn/GitHub), and verification status.
 - **Review System**: Users can leave 1-to-5 star reviews with comments.
 - **Anti-Spam Protection**: The review system tracks IP addresses to ensure a "one review per provider per person" rule.
 - **Interactive API Documentation**: A built-in, OpenAPI-style documentation page mimicking Swagger UI, accessible via `/api-docs`.
 - **Database Seeding**: Includes a `seed.py` script to easily reset the database and populate it with realistic dummy data.
+- **Automated Testing**: Complete Pytest test suite for backend API routes and models using an isolated in-memory SQLite database.
 
 ## Technology Stack
 
@@ -63,6 +65,12 @@ python main.py
 ```
 The application will be available at `http://localhost:5001` (or your network IP).
 
+### 7. Run the Test Suite
+We enforce testing standards via Pytest. The test suite automatically uses an isolated in-memory SQLite database, guaranteeing that your real database is never touched. To run the tests:
+```bash
+python -m pytest -v
+```
+
 ## API Endpoints
 
 The application features a fully documented RESTful JSON API. You can view the interactive documentation by navigating to the **API Docs** link in the application's navigation bar, or by referencing the routes below:
@@ -84,6 +92,9 @@ The application features a fully documented RESTful JSON API. You can view the i
 - `models.py`: SQLAlchemy database models (`Provider` and `Review`).
 - `seed.py`: Utility script for database initialization and dummy data injection.
 - `requirements.txt`: Python package dependencies.
-- `templates/`: Directory containing Jinja2 HTML templates (`base.html`, `index.html`, `profile.html`, `api_docs.html`).
+- `templates/`: Directory containing Jinja2 HTML templates and reusable partials.
+- `static/`: Directory containing modular Javascript (`func/`) and other static assets.
+- `tests/`: Directory containing the Pytest automated testing suite (`conftest.py`, `test_models.py`, `test_routes.py`).
 
-### proudly created by  Alvison Hunter Arnuero - May 1st, 2026
+### Proudly created by Alvison Hunter Arnuero
+Last updated: Saturday, May 2nd, 2026
