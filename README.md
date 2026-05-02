@@ -65,9 +65,7 @@ The application will be available at `http://localhost:5001` (or your network IP
 The application features a fully documented RESTful JSON API. You can view the interactive documentation by navigating to the **API Docs** link in the application's navigation bar, or by referencing the routes below:
 
 CURRENT UI DEMO
-
-https://res.cloudinary.com/alvison-hunter/image/upload/v1777688440/starwars/ccl%20team/SERVICE_PROVIDER_-_UI_DEMO_jd0wjo.jpg
-
+![SERVICE PROVIDER - UI DEMO](https://res.cloudinary.com/alvison-hunter/image/upload/v1777688440/starwars/ccl%20team/SERVICE_PROVIDER_-_UI_DEMO_jd0wjo.jpg "SERVICE PROVIDER - UI DEMO")
 
 ### Providers
 - `GET /providers` - Retrieve all service providers.
