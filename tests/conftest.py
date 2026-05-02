@@ -42,8 +42,8 @@ def init_database(app):
             is_verified=True,
             starting_rate=100.0,
             location="Nicaragua",
-            phone="555-0000",
-            email="test@example.com"
+            phone="+50588993344",
+            email="jack@fakepeople.com"
         )
         db.session.add(provider)
         db.session.commit()
