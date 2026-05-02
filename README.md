@@ -2,6 +2,9 @@
 
 A lightweight, high-performance web application and RESTful API that serves as a directory for local service professionals (e.g., developers, carpenters, electricians, doctors). It provides a clean, modern user interface for visitors to browse professionals and a robust backend for managing data.
 
+CURRENT UI DEMO
+![SERVICE PROVIDER - UI DEMO](https://res.cloudinary.com/alvison-hunter/image/upload/v1777688440/starwars/ccl%20team/SERVICE_PROVIDER_-_UI_DEMO_jd0wjo.jpg "SERVICE PROVIDER - UI DEMO")
+
 ## Features
 
 - **Modern UI/UX**: Built with standard HTML, Tailwind CSS, and DaisyUI for a beautiful, responsive, and mobile-friendly experience.
@@ -63,9 +66,6 @@ The application will be available at `http://localhost:5001` (or your network IP
 ## API Endpoints
 
 The application features a fully documented RESTful JSON API. You can view the interactive documentation by navigating to the **API Docs** link in the application's navigation bar, or by referencing the routes below:
-
-CURRENT UI DEMO
-![SERVICE PROVIDER - UI DEMO](https://res.cloudinary.com/alvison-hunter/image/upload/v1777688440/starwars/ccl%20team/SERVICE_PROVIDER_-_UI_DEMO_jd0wjo.jpg "SERVICE PROVIDER - UI DEMO")
 
 ### Providers
 - `GET /providers` - Retrieve all service providers.
