@@ -36,12 +36,12 @@ def init_database(app):
 
         # Insert Mock Provider
         provider = Provider(
-            name="Test Engineer",
-            trade="Automated Tester",
+            name="Jack Reacher",
+            trade="Senior Software Engineer",
             bio="I test code automatically.",
             is_verified=True,
             starting_rate=100.0,
-            location="Testville",
+            location="Nicaragua",
             phone="555-0000",
             email="test@example.com"
         )
@@ -52,7 +52,7 @@ def init_database(app):
         review = Review(
             pro_id=provider.id,
             rating=5,
-            comment="100% test coverage!",
+            comment="I highly recommend him for web development",
             ip_address="127.0.0.1"
         )
         db.session.add(review)
