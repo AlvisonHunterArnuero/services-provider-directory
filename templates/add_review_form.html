@@ -1,0 +1,26 @@
+        <!-- Add Review Section -->
+        <div class="mt-8 card bg-base-200">
+            <div class="card-body">
+                <h3 class="card-title text-xl mb-4">Leave a Review</h3>
+                <form id="review-form" data-pro-id="{{ pro.id }}" class="space-y-4">
+                    <div class="form-control w-full max-w-xs">
+                        <label class="label"><span class="label-text">Rating</span></label>
+                        <div class="rating rating-lg">
+                            <input type="radio" name="rating" value="1" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating" value="2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating" value="3" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating" value="4" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating" value="5" class="mask mask-star-2 bg-orange-400" checked />
+                        </div>
+                    </div>
+
+                    <div class="form-control">
+                        <label class="label"><span class="label-text">Comment</span></label>
+                        <textarea name="comment" class="textarea textarea-bordered h-24"
+                            placeholder="Share your experience working with {{ pro.name }}..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-secondary mt-2">Submit Review</button>
+                </form>
+            </div>
+        </div>
