@@ -15,7 +15,7 @@ def seed_data():
         "phone": "+50588638751",
         "email": "alvison@gmail.com",
         "linkedIn_url": "https://www.linkedin.com/in/alvisonhunter/",
-        "github_url": "",
+        "github_url": "https://github.com/AlvisonHunterArnuero",
         "photo_url": "https://res.cloudinary.com/alvison-hunter/image/upload/v1777653422/starwars/ccl%20team/alvison_p3gvwd.png",
         "location": "Carazo, Nicaragua",
         "experience_years": 16,
@@ -29,7 +29,7 @@ def seed_data():
         "phone": "+50583587771",
         "email": "ralexs.acu@gmail.com",
         "linkedIn_url": "https://www.linkedin.com/in/ralexs0096/",
-        "github_url": "",
+        "github_url": "https://github.com/Ralexs0096",
         "photo_url": "https://res.cloudinary.com/alvison-hunter/image/upload/v1777653419/starwars/ccl%20team/alex_jfz85j.png",
         "location": "Carazo, Nicaragua",
         "experience_years": 9,
@@ -43,7 +43,7 @@ def seed_data():
         "phone": "50581886845",
         "email": "eblind39@hotmail.com",
         "linkedIn_url":"https://www.linkedin.com/in/ernesto-gutierrez-ergch/",
-        "github_url": "https://github.com/",
+        "github_url": "https://github.com/eblind39",
         "photo_url": "https://res.cloudinary.com/alvison-hunter/image/upload/v1777653423/starwars/ccl%20team/tito_ksrqmh.png",
         "location": "Granada, Nicaragua",
         "experience_years": 12,
@@ -57,7 +57,7 @@ def seed_data():
         "phone": "+50586379268",
         "email": "patrick.cairoli@gmail.com",
         "linkedIn_url": "https://www.linkedin.com/in/patrick-cairoli/",
-        "github_url": "",
+        "github_url": "https://github.com/Patrikk-io",
         "photo_url": "https://res.cloudinary.com/alvison-hunter/image/upload/v1777653421/starwars/ccl%20team/pat_sjcz9z.png",
         "location": "Managua, Nicaragua",
         "experience_years": 6,
@@ -71,7 +71,7 @@ def seed_data():
         "phone": "",
         "email": "jcairoli1993@gmail.com",
         "linkedIn_url": "https://www.linkedin.com/in/jean-cairoli-a94a6622a",
-        "github_url": "",
+        "github_url": "https://github.com/Jean-Cairoli",
         "photo_url": "https://res.cloudinary.com/alvison-hunter/image/upload/v1777653421/starwars/ccl%20team/papu_p7srlu.png",
         "location": "Managua,Nicaragua",
         "experience_years": 7,
@@ -95,21 +95,21 @@ def seed_data():
     },
     {
         "name": "Krysthopher Rivera",
-        "trade": "Full-Stack Developer",
+        "trade": "FE Developer",
         "phone": "+50582003877",
         "email": "krysthopher@gmail.com",
         "linkedIn_url": "https://www.linkedin.com/in/krysthopher-ruiz/",
-        "github_url": "",
+        "github_url": "https://github.com/Krysthecoder",
         "photo_url": "https://res.cloudinary.com/alvison-hunter/image/upload/v1777653420/starwars/ccl%20team/Krys_Ruiz_01_ykfjls.png",
         "location": "Carazo, Nicaragua",
         "experience_years": 4,
         "is_verified": True,
         "starting_rate": 12.0,
-        "bio": "Full-Stack Developer experienced in React, Next.js, Node.js, GraphQL, MongoDB, and TypeScript. Passionate about web development, mentorship, and delivering high-quality solutions."
+        "bio": "FE Developer experienced in React, Next.js, Node.js, GraphQL, MongoDB, and TypeScript. Passionate about web development, mentorship, and delivering high-quality solutions."
     },
     {
         "name": "Carlos Mondragon",
-        "trade": "Full-Stack Developer",
+        "trade": "FE Developer",
         "phone": "+50586330106",
         "email": "cema962002@gmail.com",
         "linkedIn_url": "https://www.linkedin.com/in/carlosmondragon2009/",
@@ -119,7 +119,7 @@ def seed_data():
         "experience_years": 3,
         "is_verified": True,
         "starting_rate": 13.0,
-        "bio": "Full-Stack Developer specializing in React, Next.js, TypeScript, NestJS, and FastAPI applications. Builds modern, accessible, and scalable web platforms with clean UI architecture."
+        "bio": "FE Developer specializing in React, Next.js, TypeScript, NestJS, and FastAPI applications. Builds modern, accessible, and scalable web platforms with clean UI architecture."
     },
     {
         "name": "Bosco Granizo",
@@ -137,7 +137,7 @@ def seed_data():
     },
     {
         "name": "Jared Vilchez",
-        "trade": "Frontend Web Developer",
+        "trade": "FE Developer",
         "phone": "50582053651",
         "email": "jared.zvo@gmail.com",
         "linkedIn_url": "https://www.linkedin.com/in/jared-vilchez-b89697346",
@@ -147,7 +147,7 @@ def seed_data():
         "experience_years": 2,
         "is_verified": True,
         "starting_rate": 10.0,
-        "bio": "Frontend Web Developer skilled in React.js, TypeScript, GraphQL, and Material UI. Builds responsive interfaces with modern frontend technologies and clean user experiences."
+        "bio": "FE Developer skilled in React.js, TypeScript, GraphQL, and Material UI. Builds responsive interfaces with modern frontend technologies and clean user experiences."
     }
 ]
 
